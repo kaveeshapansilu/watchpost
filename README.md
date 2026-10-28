@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/watchpost-banner.svg?v=48fa247" alt="Watchpost. Your uptime, out in the open." width="100%" />
+  <img src="https://raw.githubusercontent.com/kaveeshapansilu/watchpost/48fa24760ecdb8239d6bc15eff7f8c98470e7241/docs/assets/watchpost-banner.svg" alt="Watchpost. Your uptime, out in the open." width="100%" />
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ Watchpost gives your website a public home for availability updates, incident ti
 
 ## A quick look
 
-![Watchpost maintenance page with a published plan and an individually completed item](docs/assets/maintenance-preview.png?v=48fa247)
+![Watchpost maintenance page with a published plan and an individually completed item](https://raw.githubusercontent.com/kaveeshapansilu/watchpost/48fa24760ecdb8239d6bc15eff7f8c98470e7241/docs/assets/maintenance-preview.png)
 
 *Preview with sample data. A fresh deployment starts empty.*
 
