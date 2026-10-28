@@ -1,9 +1,9 @@
 {
-  "name": "Example Website",
+  "name": "Watchpost",
   "url": "https://example.com",
-  "title": "Example Website Status",
+  "title": "Watchpost Status",
   "description": "Service availability, incidents, and planned maintenance.",
-  "logo": "",
+  "logo": "/watchpost-logo-black.png",
   "contactUrl": "",
   "primaryColor": "#0f766e",
   "accentColor": "#0f766e",
