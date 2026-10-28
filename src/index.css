@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --brand-primary: 15 118 110;
+  --brand-accent: 15 118 110;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-800 antialiased;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(var(--brand-accent));
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  @apply bg-brand-primary text-white px-4 py-2 rounded-md;
+}
+
+/* Liquid ambient blobs (admin sign-in + dashboard accents) */
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(34px, -24px) scale(1.12); }
+  66% { transform: translate(-22px, 22px) scale(0.94); }
+}
+.animate-blob { animation: blob-drift 12s ease-in-out infinite; }
+.animate-blob-slow { animation: blob-drift 18s ease-in-out infinite reverse; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-blob, .animate-blob-slow { animation: none; }
+}
+
+/* Status mark entrance (plays once, no repeats) */
+@keyframes status-mark-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.06); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes status-ring-once {
+  from { opacity: 0.5; transform: scale(0.8); }
+  to { opacity: 0; transform: scale(1.35); }
+}
+.status-mark-pop { animation: status-mark-pop 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.status-ring-once { animation: status-ring-once 0.8s ease-out 0.1s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .status-mark-pop, .status-ring-once { animation: none; }
+}
+
+/* Uptime bars: staggered rise-in + GPU-only hover (no layout thrash) */
+@keyframes bar-rise {
+  from { opacity: 0; transform: scaleY(0.15); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+.bar-rise {
+  animation: bar-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  transform-origin: bottom;
+}
+.bar-cell {
+  transform-origin: bottom;
+  will-change: transform;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.25s ease;
+}
+.bar-cell:hover, .bar-cell:focus-visible {
+  transform: scaleY(1.22);
+  filter: brightness(1.08) saturate(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar-rise { animation: none; }
+  .bar-cell { transition: none; will-change: auto; }
+  .bar-cell:hover, .bar-cell:focus-visible { transform: none; filter: none; }
+}
+
+/* Tooltip readout: liquid blur-fade swap, layout-stable (fixed height) */
+@keyframes tooltip-swap {
+  from { opacity: 0; transform: translateY(5px) scale(0.97); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+.tooltip-swap { animation: tooltip-swap 0.32s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip-swap { animation: none; }
+}
+
+/* Full-screen mobile menu entrance */
+@keyframes menu-item-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+.menu-item-in { animation: menu-item-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-item-in { animation: none; }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow-card border border-slate-200/70;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-primary text-white px-4 py-2.5 rounded-lg font-medium hover:bg-brand-dark focus-visible:outline-none transition-colors disabled:opacity-60 disabled:cursor-not-allowed text-sm;
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-brand-accent text-brand-dark px-4 py-2.5 rounded-lg font-semibold hover:bg-brand-soft transition-colors text-sm;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-slate-300 bg-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors;
+  }
+  .input {
+    @apply w-full border border-slate-300 rounded-lg px-3.5 py-2.5 text-sm bg-white placeholder:text-slate-400 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/15 outline-none transition;
+  }
+  .label {
+    @apply block text-sm font-medium text-slate-700 mb-1.5;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold;
+  }
+}

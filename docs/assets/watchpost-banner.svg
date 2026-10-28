@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Watchpost</title>
+  <desc id="desc">Your uptime, out in the open. Self-hosted status pages, incidents, and maintenance.</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#263345" stroke-width="1"/></pattern>
+    <linearGradient id="fade"><stop stop-color="#0b1220"/><stop offset="1" stop-color="#102c2b"/></linearGradient>
+  </defs>
+  <rect width="1280" height="360" rx="24" fill="url(#fade)"/>
+  <rect x="800" width="480" height="360" fill="url(#grid)" opacity=".5"/>
+  <rect x="64" y="56" width="56" height="56" rx="16" fill="#c5f74f"/>
+  <path d="M75 86h9l5-14 8 26 6-12h7" fill="none" stroke="#12201a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="138" y="94" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="34" font-weight="750" letter-spacing="-1" fill="#f8fafc">watchpost</text>
+  <text x="64" y="190" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="53" font-weight="720" letter-spacing="-1.8" fill="#f8fafc">Your uptime, out in the open.</text>
+  <text x="66" y="236" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="21" fill="#a9b9cb">Clear updates. Your branding. Your infrastructure.</text>
+  <circle cx="74" cy="299" r="5" fill="#c5f74f"/>
+  <text x="91" y="305" font-family="ui-monospace, monospace" font-size="14" letter-spacing="1.4" fill="#d6e2ed">STATUS  /  INCIDENTS  /  MAINTENANCE</text>
+  <path d="M1045 196h32l18-50 31 95 22-45h65" fill="none" stroke="#c5f74f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+</svg>

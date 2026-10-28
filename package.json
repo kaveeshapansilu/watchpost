@@ -1,0 +1,51 @@
+{
+  "name": "watchpost",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint --max-warnings=0",
+    "preview": "vite preview",
+    "setup": "node scripts/setup.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "monitor:env": "node scripts/monitor-env.mjs",
+    "check": "npm run lint && npm test && npm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.47.0",
+    "motion": "^14.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "oxlint": "^1.81.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.13",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  },
+  "license": "MIT",
+  "description": "Your uptime, out in the open. Self-hosted status pages, incident updates, and maintenance.",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaveeshapansilu/watchpost.git"
+  },
+  "homepage": "https://github.com/kaveeshapansilu/watchpost#readme",
+  "bugs": {
+    "url": "https://github.com/kaveeshapansilu/watchpost/issues"
+  }
+}

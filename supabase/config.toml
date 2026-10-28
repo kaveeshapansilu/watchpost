@@ -1,0 +1,5 @@
+project_id = "watchpost"
+
+[functions.monitor]
+# The function checks its own dedicated Bearer secret. It does not accept anonymous calls.
+verify_jwt = false

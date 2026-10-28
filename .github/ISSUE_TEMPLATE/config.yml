@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup and deployment guide
+    url: https://github.com/kaveeshapansilu/watchpost/blob/main/docs/DEPLOYMENT.md
+    about: Start here for configuration, hosting, and monitoring setup.
+  - name: Report a security vulnerability privately
+    url: https://github.com/kaveeshapansilu/watchpost/security/advisories/new
+    about: Keep security-sensitive details out of public issues.

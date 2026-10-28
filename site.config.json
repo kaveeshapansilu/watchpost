@@ -1,0 +1,11 @@
+{
+  "name": "Example Website",
+  "url": "https://example.com",
+  "title": "Example Website Status",
+  "description": "Service availability, incidents, and planned maintenance.",
+  "logo": "",
+  "contactUrl": "",
+  "primaryColor": "#0f766e",
+  "accentColor": "#0f766e",
+  "adminPath": "/admin"
+}
